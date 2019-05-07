@@ -1,0 +1,30 @@
+<html>
+
+    <head>
+        <title>Calculator</title>
+    </head>
+
+    
+    <body>
+        <h1>Calculator</h1>
+        <input type='text' id="myinput">
+        <button onclick='calculator()'>Submit</button>
+        <p id = "placetoprint"></p>
+    </body>
+    <script>
+        function calculator(){
+            var mynum = document.getElementById('myinput').value;
+            if (isNaN(mynum)){
+                alert("put in a number please");
+            } else if (mynum.trim() ==''){
+                alert("put in a number please");
+            } else {
+                //alert(mynum * 100);
+                document.getElementById('placetoprint').innerHTML = mynum * 100;
+            }
+            document.getElementById('myinput').value='';
+
+        }
+    </script>
+
+</html>
